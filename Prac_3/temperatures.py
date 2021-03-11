@@ -1,6 +1,7 @@
 def main():
     print_menu()
-    calculator()
+    choice = input(">>> ").upper()
+    calculator(choice)
 
 
 def print_menu():
@@ -11,8 +12,8 @@ Q - Quit"""
     print(MENU)
 
 
-def calculator():
-    choice = input(">>> ").upper()
+def calculator(choice):
+
     while choice != "Q":
         if choice == "C":
             celsius = float(input("Celsius: "))
