@@ -13,6 +13,7 @@ def main():
     score = float(input("Enter score: >>>"))
     checking_value(score)
     print("\nA list of random numbers: \n")
+    print("test")
     calculating_random_score()
 
 
