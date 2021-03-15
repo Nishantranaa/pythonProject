@@ -24,4 +24,5 @@ print(numbers[2:])
 # Check if 9 is an element of numbers
 test = numbers[-2] > 0 # boolean statement
 print("It is a numeric value")
-print(type(test))
+print(type(test))# print the data type
+
