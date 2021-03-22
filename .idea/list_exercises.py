@@ -26,13 +26,17 @@
 # print('The average of the numbers is {}'.format(average))
 
 # TODO: Intermediate exercise 2
+count = 1
+while not count == 0:
+ usernames = ['jimbo', 'giltson98', 'derekf', 'WhatSup', 'NicolEye', 'swei45', 'BaseInterpreterInterface', 'BaseStdIn', 'Command', 'ExecState', 'InteractiveConsole', 'InterpreterInterface', 'StartServer', 'bob']
+ compare_name = []
+ compare_name = input("Enter your username: ").lower()
 
-usernames = ['jimbo', 'giltson98', 'derekf', 'WhatSup', 'NicolEye', 'swei45', 'BaseInterpreterInterface', 'BaseStdIn', 'Command', 'ExecState', 'InteractiveConsole', 'InterpreterInterface', 'StartServer', 'bob']
-compare_name = []
-compare_name = input("Enter your name: ")
-
-if compare_name in usernames:
+ if compare_name in usernames:
     print("Access granted")
-else:
+    count = 0
+ else:
     print("Access denied")
+
+print("Logout when done!")
 
