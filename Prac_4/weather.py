@@ -99,23 +99,77 @@
 # things.pop()
 # print(things)
 
-data = [['Derek', 7], ['Carrie', 8], ['Bob', 6], ['Aaron', 9]]
-data.sort()
-print(data)
-# Gives [['Aaron', 9], ['Bob', 6], ['Carrie', 8], ['Derek', 7]]
+# data = [['Derek', 7], ['Carrie', 8], ['Bob', 6], ['Aaron', 9]]
+# data.sort()
+# print(data)
+# # Gives [['Aaron', 9], ['Bob', 6], ['Carrie', 8], ['Derek', 7]]
+#
+#
+# from operator import itemgetter
+#
+# data = [['Derek', 7], ['Carrie', 8], ['Bob', 6], ['Aaron', 9]]
+# data.sort(key=itemgetter(1))
+# print(data)
+# # Gives [['Bob', 6], ['Derek', 7], ['Carrie', 8], ['Aaron', 9]]
+#
+#
+# from operator import itemgetter
+#
+# data = [['Derek', 7], ['Carrie', 8], ['Bob', 6], ['Aaron', 9]]
+# data.sort(key=itemgetter(1, 0))
+# print(data)
+# # Gives [['Bob', 6], ['Derek', 7], ['Carrie', 8], ['Aaron', 9]]
+#
+#
+# # using the split function
+# # words = 'this is a test'.split()
+# # print(words)
+#
+# # capitalise each word
+# words = 'one two three'.split()
+# for i in range(len(words)):
+#     words[i] = words[i].title()
+# text = ', '.join(words)
+# print(words)
+# # put commas between words print(text)
+#
+#
+# # a alias, these two variables are the same thing.
+# numbers = [10, 20, 30]
+# things = numbers
+# numbers.append(40)
+#
+# print(numbers, '\n', things)
+#
+# # Complete this program that asks the user for their scores and adds them to the list, until they enter a negative score, then prints their highest score.
+# scores = []
+# score = int(input("Score: "))
+# while score >= 0:
+#     scores.append(score)
+#     score = int(input("Score: "))
+# print("Your highest score is", max(scores))
+#
+# y = ('a', 3.567)
+#
+# print(y)
 
 
-from operator import itemgetter
+# tuples
+# date_string = input("Enter DOB (d/m/y)")
+# parts = date_string.split("/")  # this will be a list of strings
+# my_dob = (int(parts[0]), int(parts[1]), int(parts[2]))
+# print(my_dob)
 
- data = [['Derek', 7], ['Carrie', 8], ['Bob', 6], ['Aaron', 9]]
- data.sort(key=itemgetter(1))
- print(data)
-# Gives [['Bob', 6], ['Derek', 7], ['Carrie', 8], ['Aaron', 9]]
+# Notice how we process each value in parts the same way
+# So we can use a list comprehension:
 
+# parts = date_string.split("/")
+# my_dob = tuple([int(part) for part in parts])
+# print(my_dob)
 
-from operator import itemgetter
+# Write a list comprehension (one line!) that produces a list of the words that
+# have > 3 characters
 
-data = [['Derek', 7], ['Carrie', 8], ['Bob', 6], ['Aaron', 9]]
-data.sort(key=itemgetter(1, 0))
-print(data)
-# Gives [['Bob', 6], ['Derek', 7], ['Carrie', 8], ['Aaron', 9]]
+text = "This is a sentence"
+long_words = [word for word in text.split() if len(word) > 3]
+print(long_words)
